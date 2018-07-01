@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kevin Truong</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">	
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">		
+		
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="titleName">Kevin Truong</h1>
+			<h2 class="email">kevinctruong112@gmail.com</h2>
+		</div>
+		<div class="topnav">
+			<a href="#">Link</a>
+			<a href="#">Link</a>
+			<a href="#">Link</a>
+		</div>
+		<div class="background">
+		<!--<object class="trainNoise" data="train_noise.mp3" height="0"></object>
+			-->
+			<div class="aboutMe">
+				<div class="centering">	
+					<h1>About Me</h1>
+				</div>
+			</div>
+			<div class="spacing">
+				<div class="centering">
+					<h1>Bye</h1>
+				</div>
+			</div>
+			<div class="moreInfo">
+				<div class="centering">
+					<p id="demo"></p>
+					<p id="direction"></p>
+					<h1>SOMETHING</h1>
+				</div>
+			</div>
+			<div class="links">
+				<div class="icons fa-7x">
+					<ul class="actIcons">
+						<li>
+							<a id="linkedinBorder" href="https://www.linkedin.com/in/kevin-truong-135912105" onmousemove="mouseOverLinkedIn(event)" onmouseout="mouseLeaveIcon()">
+								<i class="fab fa-linkedin"></i>
+								<i class="fab fa-linkedin"></i>
+							</a>
+						</li>
+						<li>
+							<a id="githubBorder" href="https://github.com/kct456" onmousemove="mouseOverGithub(event)" onmouseout="mouseLeaveIcon()">
+								<i class="fab fa-github"></i>
+								<i class="fab fa-github"></i>
+							</a>
+						</li>
+					</ul>
+					<ul class="iconMSG">
+						<li>
+							<figure class="linkedinFig">
+								<a href="#" id="linkedin" onmousemove="mouseOverLinkedIn(event)" onmouseout="mouseLeaveIcon()">
+									View LinkedIn
+								</a>
+							</figure>
+						</li>
+						<li>
+							<figure class="githubFig">
+								<a href="#" id="github" onmousemove="mouseOverGithub(event)" onmouseout="mouseLeaveIcon()">
+									View Github
+								</a>
+							</figure>
+						</li>
+					</ul>
+					
+					<h1 id="meep" class="iconMSG"></h1>
+				</div>
+			</div>
+		</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function(){
+			$(".linkedinFig").hover(function(){
+				$(".fab.fa-linkedin").toggleClass("test");
+			});
+			$(".githubFig").hover(function(){
+				$(".fab.fa-github").toggleClass("test");
+			});
+		});
+		function mouseOverLinkedIn(e){
+			document.getElementById("linkedin").style.transition = "all .5s";
+			document.getElementById("linkedin").style.color = "#0D47A1";
+			document.getElementById("linkedin").style.textDecoration = "underline overline";
+			document.getElementById("linkedinBorder").style.borderRadius = "50%";
+			('icons ul.actIcons li a i.fab.fa-github').toggleClass('icons ul.actIcons li a:hover i.fab.fa-github');
+		}
+		function mouseOverGithub(e){
+			document.getElementById("github").style.transition = "all .5s";
+			document.getElementById("github").style.color = "#673AB7";
+			document.getElementById("github").style.textDecoration = "underline overline";
+			document.getElementById("githubBorder").style.borderRadius = "50%";
+		}
+		function mouseLeaveIcon(){
+			document.getElementById("linkedin").style.color = "#FFF";
+			document.getElementById("github").style.color = "#FFF";
+			document.getElementById("linkedin").style.textDecoration = "none";
+			document.getElementById("github").style.textDecoration = "none";
+			document.getElementById("linkedinBorder").style.borderRadius = "initial";
+			document.getElementById("githubBorder").style.borderRadius = "initial";
+		}
+	</script>
+	</body>
+</html>
