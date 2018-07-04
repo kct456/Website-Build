@@ -10,6 +10,11 @@
 		
 	</head>
 	<body>
+		<div class="Introduction">
+			<video id="introVideo" width="100%" height="620" autoplay="autoplay" loop muted> 
+				<source src="cloud_timelapse.mov">
+			</video>
+		</div>
 		<div class="header">
 			<h1 class="titleName">Kevin Truong</h1>
 			<h2 class="email">kevinctruong112@gmail.com</h2>
@@ -43,13 +48,13 @@
 				<div class="icons fa-7x">
 					<ul class="actIcons">
 						<li>
-							<a id="linkedinBorder" href="https://www.linkedin.com/in/kevin-truong-135912105" onmousemove="mouseOverLinkedIn(event)" onmouseout="mouseLeaveIcon()">
+							<a class="linkedin" id="linkedinBorder" href="https://www.linkedin.com/in/kevin-truong-135912105" onmousemove="mouseOverLinkedIn(event)" onmouseout="mouseLeaveIcon()">
 								<i class="fab fa-linkedin"></i>
 								<i class="fab fa-linkedin"></i>
 							</a>
 						</li>
 						<li>
-							<a id="githubBorder" href="https://github.com/kct456" onmousemove="mouseOverGithub(event)" onmouseout="mouseLeaveIcon()">
+							<a class="github" id="githubBorder" href="https://github.com/kct456" onmousemove="mouseOverGithub(event)" onmouseout="mouseLeaveIcon()">
 								<i class="fab fa-github"></i>
 								<i class="fab fa-github"></i>
 							</a>
@@ -58,14 +63,14 @@
 					<ul class="iconMSG">
 						<li>
 							<figure class="linkedinFig">
-								<a href="#" id="linkedin" onmousemove="mouseOverLinkedIn(event)" onmouseout="mouseLeaveIcon()">
+								<a href="https://www.linkedin.com/in/kevin-truong-135912105" id="linkedin" onmousemove="mouseOverLinkedIn(event)" onmouseout="mouseLeaveIcon()">
 									View LinkedIn
 								</a>
 							</figure>
 						</li>
 						<li>
 							<figure class="githubFig">
-								<a href="#" id="github" onmousemove="mouseOverGithub(event)" onmouseout="mouseLeaveIcon()">
+								<a href="https://github.com/kct456" id="github" onmousemove="mouseOverGithub(event)" onmouseout="mouseLeaveIcon()">
 									View Github
 								</a>
 							</figure>
@@ -82,32 +87,29 @@
 	<script>
 		$(document).ready(function(){
 			$(".linkedinFig").hover(function(){
-				$(".fab.fa-linkedin").toggleClass("test");
+				$(".fab.fa-linkedin").toggleClass("linkedInChange");
+				$(".linkedin").toggleClass("special");
 			});
 			$(".githubFig").hover(function(){
-				$(".fab.fa-github").toggleClass("test");
+				$(".fab.fa-github").toggleClass("githubChange");
+				$(".github").toggleClass("special");
 			});
 		});
 		function mouseOverLinkedIn(e){
 			document.getElementById("linkedin").style.transition = "all .5s";
 			document.getElementById("linkedin").style.color = "#0D47A1";
 			document.getElementById("linkedin").style.textDecoration = "underline overline";
-			document.getElementById("linkedinBorder").style.borderRadius = "50%";
-			('icons ul.actIcons li a i.fab.fa-github').toggleClass('icons ul.actIcons li a:hover i.fab.fa-github');
 		}
 		function mouseOverGithub(e){
 			document.getElementById("github").style.transition = "all .5s";
 			document.getElementById("github").style.color = "#673AB7";
 			document.getElementById("github").style.textDecoration = "underline overline";
-			document.getElementById("githubBorder").style.borderRadius = "50%";
 		}
 		function mouseLeaveIcon(){
 			document.getElementById("linkedin").style.color = "#FFF";
 			document.getElementById("github").style.color = "#FFF";
 			document.getElementById("linkedin").style.textDecoration = "none";
 			document.getElementById("github").style.textDecoration = "none";
-			document.getElementById("linkedinBorder").style.borderRadius = "initial";
-			document.getElementById("githubBorder").style.borderRadius = "initial";
 		}
 	</script>
 	</body>

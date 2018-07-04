@@ -204,12 +204,11 @@ input, select {
 	margin: 0 240px;
 	box-shadow: 0 0 0 10px #262626;
 	overflow: hidden;
-	
+	border-radius: 50%;
 }
 
 .icons ul.actIcons li a i.fab{
 	position: relative;
-	color: #fff;
 	width: 100%;
 	height: 100%;
 	height: 60px;
@@ -218,11 +217,6 @@ input, select {
 }
 
 .icons ul.actIcons li a:hover i.fab.fa-github{
-	transform: translateY(-255%);
-	color:#673AB7;
-}
-
-.test{
 	transform: translateY(-255%);
 	color:#673AB7;
 }
@@ -249,9 +243,7 @@ input, select {
 	transform: scaleY(1);
 }
 
-.test1{
-	transform: scaleY(1);
-}
+
 
 .iconMSG li{
 	position: relative;
@@ -285,6 +277,26 @@ input, select {
 	color: black;
 	background-color: white;
 }
+
+.Video{
+	margin-left: -10px;
+}
+
+/* jQuery class stuff*/
+.githubChange{
+	transform: translateY(-255%);
+	color: #673AB7;
+}
+
+.linkedInChange{
+	transform: translateY(-255%);
+	color: #0D47A1;
+}
+
+.icons ul.actIcons li a.special:before{
+	transform: scaleY(1);
+}
+
 
 
 
