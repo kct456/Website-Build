@@ -106,22 +106,47 @@ input, select {
     vertical-align:middle;
 }
 
-/*MY CODE*/
+/*MY CSS*/
 
-.header{
-		background-color:#0B0746;
-		padding: 20px;
-		text-align:center;
+html{
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
-.titleName{
-	color: #fff;
-	font-size: 50px;
+body{
+	font-family: "Courier New", Courier, monospace;
+}
+
+.Introduction{
+	height: 100vh;
+}
+
+.Introduction video{
+	position: relative;
+	transform: scaleX(1.15);
+	z-index: 0;
+}
+
+.overlay{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	color: white;
+}
+
+.overlayName{
+	font-size:10vh;
+}
+
+.titles p{
+	font-size:3.5vh;
+}
+
+.overlay p{
 	text-align: center;
-}
-
-.email{
-	color:#fff
+	padding: 3vh 0px;
 }
 
 .topnav{
@@ -132,32 +157,46 @@ input, select {
 	position: sticky;
 	top: 0;
 	z-index: 5;
+	height: 50px;
+}
+
+
+
+.topnav h1{
+	float: right;
+	color: white;
+	position: relative;
+	padding-right: 15px;
+	line-height: 45px;
+}
+
+.directories{
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .topnav a{
 	float: left;
 	display: block;
-	color:#f2f2f2;
+	color:white;
 	text-align: center;
-	padding: 14px 16px; /*vertical - horizontal padding*/
+	padding: 0px 15px; /*vertical - horizontal padding*/
+	line-height: 45px;
 	text-decoration: none;
+	transition: .5s;
 }
 
 .topnav a:hover{
-	background-color: #ddd;
-	color:black;
-	
+	color: #3498DB;
 }
 
 .background{
-	background-image: url("train.gif");
+	background-image: url("Train.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	height:100%;
-}
-.header a{
 }
 
 .centering{
@@ -168,7 +207,7 @@ input, select {
 }
 
 .links{
-	height: 500px;
+	height: 98vh;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -177,9 +216,9 @@ input, select {
 	position: relative;
 	margin: 0 auto;
 	padding: 0;
-	top: 50%;
+	top: 60%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -60%);
 }
 .icons ul{
 	position: relative;
@@ -188,45 +227,46 @@ input, select {
 	display: flex;
 	
 }
-
-.icons ul.actIcons li{
+	
+.actIcons li{
 	list-style: none;
 }
 
-.icons ul.actIcons li a{
+.actIcons li a{
 	position: relative;
 	display: block;
-	width: 150px;
-	height: 150px;
+	width: 25vh;
+	height: 25vh;
 	color: #fff;
 	text-align: center;
-	line-height: 150px;
-	margin: 0 240px;
-	box-shadow: 0 0 0 10px #262626;
+	left: 10vw;
+	transform: translateX(10vw);
+	margin-right: 35vw;
+	box-shadow: 0 0 0 1.75vh #262626;
 	overflow: hidden;
 	border-radius: 50%;
 }
 
-.icons ul.actIcons li a i.fab{
+.actIcons li a i.fab{
 	position: relative;
 	width: 100%;
 	height: 100%;
-	height: 60px;
-	line-height: 60px;
+	font-size: 18vh;
+	line-height: 25vh;
 	transition: .5s;
 }
 
-.icons ul.actIcons li a:hover i.fab.fa-github{
-	transform: translateY(-255%);
+.actIcons li a:hover i.fab.fa-github{
+	transform: translateY(-25vh);
 	color:#673AB7;
 }
 
-.icons ul.actIcons li a:hover i.fab.fa-linkedin{
-	transform: translateY(-255%);
+.actIcons li a:hover i.fab.fa-linkedin{
+	transform: translateY(-25vh);
 	color:#0D47A1;
 }
 
-.icons ul.actIcons li a:before{
+.actIcons li a:before{
 	content: '';
 	position: absolute;
 	top: 0;
@@ -239,7 +279,7 @@ input, select {
 	transition: transform .5s;
 }
 
-.icons ul.actIcons li a:hover:before{
+.actIcons li a:hover:before{
 	transform: scaleY(1);
 }
 
@@ -248,55 +288,93 @@ input, select {
 .iconMSG li{
 	position: relative;
 	display: block;
-	font-size: 25px;
+	font-size: 4vh;
 	text-align: center;
 	color: white;
-	margin: 0 240px;
+	margin-left: 9vw;
+	margin-right: 23.9vw;
+	left: 10vh;
+	transform: translateX(10vh);
 	transition: transform .5s;
-	padding: 20px 0;
+	padding: 3vh 0;
 }
 
 .iconMSG li a{
 	color: white;
 }
+/* TEMP STUFF */
+.aboutMeSpacing{
+	height: 50px;
+}
 
 .spacing{
-	height:200px;
-	margin: 0 auto;
+	height:50px;
+}
+
+.skillsWhiteSpace{
+	height: 25px;
+	background-color: white;
+}
+
+.whiteSpace{
+	height: 25px;
+	background-color: white;
+}
+
+.skills{
+	height: 70vh;
+	background-image: url("code.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.skills p{
+	font-size: 100px;
 	color: white;
 }
 
 .aboutMe{
-	height:200px;
-	margin: 0 auto;
+	height:500px;
+	position: relative;
+	margin-left: 50px;
+	margin-right: 50px;
 	background-color:white;
 }
 
-.moreInfo{
-	height: 200px;
-	color: black;
-	background-color: white;
+.aboutMe h1{
+	padding: 20px 0px;
+	font-size: 40px;
+	text-decoration: underline overline;
 }
 
-.Video{
-	margin-left: -10px;
+.aboutMeCentering{
+	top: 15%;
+	transform: translateY(-15%);
+	text-align: center;
+	position: relative;
 }
+/* END OF TEMP STUFF */
 
 /* jQuery class stuff*/
 .githubChange{
-	transform: translateY(-255%);
+	transform: translateY(-25vh);
 	color: #673AB7;
 }
 
 .linkedInChange{
-	transform: translateY(-255%);
+	transform: translateY(-25vh);
 	color: #0D47A1;
 }
 
-.icons ul.actIcons li a.special:before{
+.actIcons li a.special:before{
 	transform: scaleY(1);
 }
 
+.wow{
+	text-align: center;
+}
 
 
 

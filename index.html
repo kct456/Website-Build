@@ -7,44 +7,52 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css">	
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">		
-		
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
 	</head>
 	<body>
 		<div class="Introduction">
-			<video id="introVideo" width="100%" height="620" autoplay="autoplay" loop muted> 
+			<video id="introVideo" width="100%" height="100%" autoplay="autoplay" loop muted> 
 				<source src="cloud_timelapse.mov">
 			</video>
-		</div>
-		<div class="header">
-			<h1 class="titleName">Kevin Truong</h1>
-			<h2 class="email">kevinctruong112@gmail.com</h2>
+			<div class="overlay">
+				<p class="overlayName animated fadeInDown">Kevin Truong</p>
+				<div class="titles">
+					<p class="animated fadeInLeft">Software Engineer</p>
+					<p id="demo" class="animated fadeInRight">Undergraduate Researcher</p>
+				</div>
+			</div>
 		</div>
 		<div class="topnav">
-			<a href="#">Link</a>
-			<a href="#">Link</a>
-			<a href="#">Link</a>
+				<div class="directories">
+					<a class="aboutMeLink" href="#aboutMe">About Me</a>
+					<a class="skillsLink" href="#skills">Skills</a>
+					<a class="connectLink" href="#connect">Connect</a>
+				</div>
+				<h1>Kevin Truong</h1>
+			
 		</div>
 		<div class="background">
 		<!--<object class="trainNoise" data="train_noise.mp3" height="0"></object>
 			-->
+			<div id="aboutMe" class="aboutMeSpacing"></div>
 			<div class="aboutMe">
-				<div class="centering">	
+				<div class="aboutMeCentering">	
 					<h1>About Me</h1>
+					<div class="wow slideInLeft" >
+						<p>I poop on Tuesdays</p>
+					</div>
 				</div>
 			</div>
-			<div class="spacing">
+			<div id="skills" class="spacing"></div>
+			<div class="skillsWhiteSpace"></div>
+			<div class="skills">
 				<div class="centering">
-					<h1>Bye</h1>
+					<p>MEEPMOOPBEEPBOOP</p>
 				</div>
 			</div>
-			<div class="moreInfo">
-				<div class="centering">
-					<p id="demo"></p>
-					<p id="direction"></p>
-					<h1>SOMETHING</h1>
-				</div>
-			</div>
-			<div class="links">
+			<div class="whiteSpace"></div>
+			<div id="connect" class="links">
 				<div class="icons fa-7x">
 					<ul class="actIcons">
 						<li>
@@ -76,15 +84,15 @@
 							</figure>
 						</li>
 					</ul>
-					
-					<h1 id="meep" class="iconMSG"></h1>
 				</div>
 			</div>
 		</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="js/wow.min.js"></script>
 	<script>
+		new WOW().init();
 		$(document).ready(function(){
 			$(".linkedinFig").hover(function(){
 				$(".fab.fa-linkedin").toggleClass("linkedInChange");
@@ -94,16 +102,36 @@
 				$(".fab.fa-github").toggleClass("githubChange");
 				$(".github").toggleClass("special");
 			});
+			$(window).scroll(function(){
+				var x = $(window).scrollTop();
+				if(x > $(".aboutMeSpacing").offset().top - 50 && x < $(".skillsWhiteSpace").offset().top - 50){
+					$(".aboutMeLink").css('color', '#3498DB');
+					$(".skillsLink").css('color','white');
+					$(".connectLink").css('color','white');
+				} else if(x > $(".skillsWhiteSpace").offset().top - 50 && x < $(".whiteSpace").offset().top - 50){
+					$(".aboutMeLink").css('color', 'white');
+					$(".skillsLink").css('color','#3498DB');
+					$(".connectLink").css('color','white');
+				} else if(x > $(".whiteSpace").offset().top - 50){
+					$(".aboutMeLink").css('color', 'white');
+					$(".skillsLink").css('color','white');
+					$(".connectLink").css('color','#3498DB');
+				} else {
+					$(".aboutMeLink").css('color', 'white');
+					$(".skillsLink").css('color','white');
+					$(".connectLink").css('color','white');
+				}
+			});
 		});
 		function mouseOverLinkedIn(e){
 			document.getElementById("linkedin").style.transition = "all .5s";
 			document.getElementById("linkedin").style.color = "#0D47A1";
-			document.getElementById("linkedin").style.textDecoration = "underline overline";
+			document.getElementById("linkedin").style.textDecoration = "underline";
 		}
 		function mouseOverGithub(e){
 			document.getElementById("github").style.transition = "all .5s";
 			document.getElementById("github").style.color = "#673AB7";
-			document.getElementById("github").style.textDecoration = "underline overline";
+			document.getElementById("github").style.textDecoration = "underline";
 		}
 		function mouseLeaveIcon(){
 			document.getElementById("linkedin").style.color = "#FFF";
